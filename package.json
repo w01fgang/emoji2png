@@ -1,0 +1,15 @@
+{
+  "name": "emoji2png",
+  "version": "0.0.0",
+  "description": "Converts unicode emoji in html with png images",
+  "main": "index.js",
+  "author": "w01fgang <sumin@unix-center.ru>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^21.2.1"
+  }
+}
