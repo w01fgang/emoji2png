@@ -1,6 +1,6 @@
 {
   "name": "emoji2png",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Converts unicode emoji in html with png images",
   "main": "index.js",
   "author": "w01fgang <sumin@unix-center.ru>",
