@@ -10,6 +10,6 @@ describe('Emoji parser', () => {
   it('should parse emoji', () => {
     const parser = new Parser('/images/');
     const result = parser.parse('Text 🙂');
-    expect(result).toBe('Text <img draggable="false" src="/images/1f642.png">');
+    expect(result).toBe('Text <img draggable="false" class="emoji" src="/images/1f642.png">');
   });
 });
