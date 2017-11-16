@@ -11,22 +11,25 @@ const toSurrogatePairs = (r) => {
   }
   return t;
 };
+
 const toCodePoint = (t) => {
   let n;
   let r;
   let o;
   let h;
+  // TODO: make this part human readable
+  /* eslint-disable */
   for (n = [], r = 0, o = 0, h = 0; h < t.length;) {
     (r = t.charCodeAt(h++)),
     o
       ? (n.push((65536 + ((o - 55296) << 10) + (r - 56320)).toString(16)), (o = 0))
       : r >= 55296 && r <= 56319 ? (o = r) : n.push(r.toString(16));
   }
+  /* eslint-enable */
   return n.join('-');
 };
-for (let i = 0; i < emojis.length; i++) {
-  regxArr.push(toSurrogatePairs(emojis[i]));
-}
+
+regxArr = emojis.map(el => toSurrogatePairs(el));
 const re = new RegExp(`(${regxArr.join('|')})`, 'g');
 regxArr = null;
 
