@@ -39,6 +39,10 @@ class Parser {
   }
 
   parse(string) {
+    if (!string) {
+      console.error('emoji2png: You should parse only strings'); // eslint-disable-line no-console
+      return string;
+    }
     return string.replace(
       re,
       (a, b) =>
