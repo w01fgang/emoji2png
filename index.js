@@ -42,8 +42,7 @@ class Parser {
     return string.replace(
       re,
       (a, b) =>
-        `<img draggable="false" class="emoji" src="${this.path + toCodePoint(noExtra(b))}.png">`,
-    );
+        `<img draggable="false" class="emoji" src="${this.path + toCodePoint(noExtra(b))}.png">`);
   }
 }
 
