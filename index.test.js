@@ -30,4 +30,9 @@ describe('Emoji parser', () => {
     const result = parser.parse('');
     expect(result).toBe('');
   });
+
+  it('should throw an error', () => {
+    const fn = () => new Parser();
+    expect(fn).toThrow('You should pass images path as the parameter to the constructor');
+  });
 });
